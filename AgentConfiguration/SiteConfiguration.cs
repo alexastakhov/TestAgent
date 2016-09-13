@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace AlfaBank.AlfaRobot.ControlAgent
+namespace AlfaBank.AlfaRobot.ControlCenter.Agent
 {
     [Serializable]
     public class SiteConfiguration

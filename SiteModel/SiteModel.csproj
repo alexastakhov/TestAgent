@@ -7,8 +7,8 @@
     <ProjectGuid>{C12D89BC-5E21-4F19-8273-D8BFA1CAE208}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AlfaBank.AlfaRobot.ControlAgent.SiteModel</RootNamespace>
-    <AssemblyName>AlfaBank.AlfaRobot.ControlAgent.SiteModel</AssemblyName>
+    <RootNamespace>AlfaBank.AlfaRobot.ControlCenter.Agent.SiteModel</RootNamespace>
+    <AssemblyName>AlfaBank.AlfaRobot.ControlCenter.Agent.SiteModel</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

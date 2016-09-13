@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AlfaBank.AlfaRobot.ControlAgent
+namespace AlfaBank.AlfaRobot.ControlCenter.Agent
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -43,7 +43,7 @@ namespace AlfaBank.AlfaRobot.ControlAgent
             if (TrayIcon == null)
             { 
                 TrayIcon = new System.Windows.Forms.NotifyIcon();
-                TrayIcon.Icon = AlfaBank.AlfaRobot.ControlAgent.Properties.Resources.switch_tray_m; 
+                TrayIcon.Icon = AlfaBank.AlfaRobot.ControlCenter.Agent.Properties.Resources.switch_tray_m; 
                 TrayIcon.Text = "AlfaRobot Control Agent."; 
                 TrayMenu = Resources["trayMenu"] as ContextMenu;
 

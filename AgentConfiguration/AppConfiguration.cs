@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlfaBank.AlfaRobot.ControlAgent
+namespace AlfaBank.AlfaRobot.ControlCenter.Agent
 {
     [Serializable]
     class AppConfiguration

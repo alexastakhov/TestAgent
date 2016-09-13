@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlfaBank.AlfaRobot.ControlAgent.Properties {
+namespace AlfaBank.AlfaRobot.ControlCenter.Agent.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace AlfaBank.AlfaRobot.ControlAgent.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AlfaBank.AlfaRobot.ControlAgent.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AlfaBank.AlfaRobot.ControlCenter.Agent.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
