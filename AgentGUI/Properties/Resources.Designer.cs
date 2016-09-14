@@ -213,6 +213,16 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
         /// </summary>
+        internal static System.Drawing.Icon switch_l {
+            get {
+                object obj = ResourceManager.GetObject("switch_l", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
         internal static System.Drawing.Icon switch_tray_m {
             get {
                 object obj = ResourceManager.GetObject("switch_tray_m", resourceCulture);
@@ -226,6 +236,16 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent.Properties {
         internal static System.Drawing.Icon switch_tray_s {
             get {
                 object obj = ResourceManager.GetObject("switch_tray_s", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon switch_xl {
+            get {
+                object obj = ResourceManager.GetObject("switch_xl", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

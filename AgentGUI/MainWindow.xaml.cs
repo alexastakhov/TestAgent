@@ -112,5 +112,14 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
         {
             CreateTrayIcon();
         }
+
+        private void addSiteToolButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddSiteForm addSiteForm = new AddSiteForm();
+
+            addSiteForm.Left = this.Left + ((this.Width - addSiteForm.Width) / 2);
+            addSiteForm.Top = this.Top + ((this.Height - addSiteForm.Height) / 2);
+            addSiteForm.ShowDialog();
+        }
     }
 }

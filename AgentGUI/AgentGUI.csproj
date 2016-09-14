@@ -56,10 +56,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EditAgentConfigForm.xaml.cs">
+      <DependentUpon>EditAgentConfigForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditSiteSettingsForm.xaml.cs">
+      <DependentUpon>EditSiteSettingsForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoForm.xaml.cs">
+      <DependentUpon>InfoForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveSiteForm.xaml.cs">
+      <DependentUpon>RemoveSiteForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StopSiteConfirmForm.xaml.cs">
+      <DependentUpon>StopSiteConfirmForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLogForm.xaml.cs">
+      <DependentUpon>ViewLogForm.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddSiteForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditAgentConfigForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditSiteSettingsForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddSiteForm.xaml.cs">
+      <DependentUpon>AddSiteForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -68,6 +105,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RemoveSiteForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StopSiteConfirmForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewLogForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -133,6 +182,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ic_info_outline_black_18dp_1x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\switch_l.ico" />
+    <Resource Include="Images\switch_xl.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

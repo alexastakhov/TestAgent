@@ -1,10 +1,13 @@
 ﻿<Window x:Class="AlfaBank.AlfaRobot.ControlCenter.Agent.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AlfaRobot Agent v.0.0.1a" Height="420" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" SourceInitialized="Window_SourceInitialized">
+        Title="AlfaRobot Agent v.0.0.1a" Height="420" Width="743" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" Closing="Window_Closing" 
+        SourceInitialized="Window_SourceInitialized" Icon="Images/switch_xl.ico">
     <Window.Resources>
         <ContextMenu x:Key="trayMenu">
             <MenuItem Name="showWinContextMenuItem" Header="Open Agent Window" Click="showWinContextMenuItemClick" />
+            <MenuItem Name="showSitePanelMenuItem" Header="Show Site-Panel" IsCheckable="True" />
             <Separator />
             <MenuItem Name="exitContextMenuItem" Header="Stop" Click="stopContextMenuItemClick" />
         </ContextMenu>
@@ -25,7 +28,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <ToolBar Grid.Row="0" Background="#FFF5F9FF" IsHitTestVisible="True">
-            <Button Name="addSiteToolButton" Style="{StaticResource toolBarButtonStyle}" ToolTip="Add site settings to agent">
+            <Button Name="addSiteToolButton" Style="{StaticResource toolBarButtonStyle}" ToolTip="Add site settings to agent" Click="addSiteToolButton_Click">
                 <Image Source="Images/ic_add_black_24dp_1x.png" Style="{StaticResource toolBarImageStyle}"/>
             </Button>
             <Button Name="deleteSiteToolButton" Style="{StaticResource toolBarButtonStyle}" ToolTip="Delete site settings from agent">
@@ -56,10 +59,10 @@
         </ToolBar>
         <DataGrid Grid.Row="1" ColumnHeaderHeight="25" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Site" Width="140" />
-                <DataGridTextColumn Header="Filepath" Width="250" />
-                <DataGridTextColumn Header="Status" Width="120" />
-                <DataGridTextColumn Header="Started at" Width="*" />
+                <DataGridTextColumn Header="Site" Width="150" />
+                <DataGridTextColumn Header="Filepath" Width="270" />
+                <DataGridTextColumn Header="Status" Width="150" />
+                <DataGridTextColumn Header="Start time" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
         <StatusBar Name="statusBar" Grid.Row="2" Height="25" BorderThickness="0" Margin="1,0"></StatusBar>
