@@ -187,6 +187,12 @@
     <Resource Include="Images\switch_l.ico" />
     <Resource Include="Images\switch_xl.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgentConfiguration\Configuration.csproj">
+      <Project>{b7669f71-6b7d-4d3e-b522-0cce4bb4accc}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

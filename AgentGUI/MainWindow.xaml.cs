@@ -32,11 +32,18 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
             set { fCurrentWindowState = value; }
         }
 
+        /// <summary>
+        /// Основной конструктор.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Создание значка в трее.
+        /// </summary>
+        /// <returns></returns>
         private bool CreateTrayIcon()
         {
             bool result = false;
@@ -113,13 +120,24 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
             CreateTrayIcon();
         }
 
+        /// <summary>
+        /// Обработка нажатия кнопки добавления нового сайта.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addSiteToolButton_Click(object sender, RoutedEventArgs e)
         {
             AddSiteForm addSiteForm = new AddSiteForm();
 
             addSiteForm.Left = this.Left + ((this.Width - addSiteForm.Width) / 2);
             addSiteForm.Top = this.Top + ((this.Height - addSiteForm.Height) / 2);
-            addSiteForm.ShowDialog();
+
+            //if (addSiteForm.ShowDialogWithResult() != null)
+            //{
+            //    Console.WriteLine();
+            //}
+
+            //Console.WriteLine();
         }
     }
 }

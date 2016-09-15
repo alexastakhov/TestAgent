@@ -16,15 +16,15 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="70" />
         </Grid.ColumnDefinitions>
-        <Label Content="Site name:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,6,3,6" />
-        <TextBox Name="siteNameText" Grid.Row="1" Grid.Column="1" Background="White" Margin="0,7" VerticalContentAlignment="Center" />
-        <Label Content="File path:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,6,3,6" />
-        <TextBox Name="filePathText" Grid.Row="2" Grid.Column="1" Background="White" Margin="0,7" VerticalContentAlignment="Center" />
-        <Label Content="Arguments:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,6,3,6" />
-        <TextBox Name="argumentsText" Grid.Row="3" Grid.Column="1" Background="White" Margin="0,7" VerticalContentAlignment="Center" />
+        <Label Name="siteNameLabel" Content="Site name:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,6,3,6" />
+        <TextBox Name="siteNameText" Grid.Row="1" Grid.Column="1" Background="White" Margin="0,7" VerticalContentAlignment="Center" TextChanged="siteNameText_TextChanged" />
+        <Label Name="filePathLabel" Content="File path:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,6,3,6" />
+        <TextBox Name="filePathText" Grid.Row="2" Grid.Column="1" Background="White" Margin="0,7" VerticalContentAlignment="Center" TextChanged="filePathText_TextChanged" />
+        <Label Name="argumentsLabel" Content="Arguments:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,6,3,6" />
+        <TextBox Name="argumentsText" Grid.Row="3" Grid.Column="1" Background="White" Margin="0,7" VerticalContentAlignment="Center" TextChanged="argumentsText_TextChanged" />
         <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Center">
-            <Button Content="Cancel" Margin="0,0,7,7" Width="100" Height="30" Background="#FFF1F1F1" />
-            <Button Content="Create" Margin="7,0,0,7" Width="100" Height="30" Background="#FFF1F1F1" />
+            <Button Name="cancelButton" Content="Cancel" Margin="0,0,7,7" Width="100" Height="30" Background="#FFF1F1F1" Click="cancelButton_Click" IsCancel="True" />
+            <Button Name="createButton" Content="Create" Margin="7,0,0,7" Width="100" Height="30" Background="#FFF1F1F1" Click="createButton_Click" IsDefault="True" />
         </StackPanel>
     </Grid>
 </Window>
