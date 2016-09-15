@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AlfaBank.AlfaRobot.ControlCenter.Configuration;
 
 namespace AlfaBank.AlfaRobot.ControlCenter.Agent
 {
@@ -29,7 +30,7 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             siteConfiguration = null;
-            this.Hide();
+            this.Close();
         }
 
         private void createButton_Click(object sender, RoutedEventArgs e)
@@ -56,7 +57,14 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
 
             if (isHide)
             {
-                this.Hide();
+                siteConfiguration = new SiteConfiguration()
+                {
+                    SiteName = siteNameText.Text,
+                    ExecutableFilePath = filePathText.Text,
+                    StartArguments = argumentsText.Text.Split(' ')
+                };
+
+                this.Close();
             }
         }
 

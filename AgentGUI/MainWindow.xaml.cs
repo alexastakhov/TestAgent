@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AlfaBank.AlfaRobot.ControlCenter.Configuration;
 
 namespace AlfaBank.AlfaRobot.ControlCenter.Agent
 {
@@ -132,12 +133,12 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
             addSiteForm.Left = this.Left + ((this.Width - addSiteForm.Width) / 2);
             addSiteForm.Top = this.Top + ((this.Height - addSiteForm.Height) / 2);
 
-            //if (addSiteForm.ShowDialogWithResult() != null)
-            //{
-            //    Console.WriteLine();
-            //}
+            SiteConfiguration siteConfiguration = addSiteForm.ShowDialogWithResult();
 
-            //Console.WriteLine();
+            if (siteConfiguration != null)
+            {
+                Console.WriteLine();
+            }
         }
     }
 }
