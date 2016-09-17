@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AlfaBank.AlfaRobot.ControlCenter.Configuration
 {
     [Serializable]
-    class AgentConfiguration
+    public class AgentConfiguration
     {
         /// <summary>
         /// URI локальной службы WCF.
@@ -33,5 +33,13 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Configuration
         /// Список конфигураций сайтов.
         /// </summary>
         public List<SiteConfiguration> Sites;
+
+        /// <summary>
+        /// Основной конструктор.
+        /// </summary>
+        public AgentConfiguration()
+        {
+            Sites = new List<SiteConfiguration>();
+        }
     }
 }

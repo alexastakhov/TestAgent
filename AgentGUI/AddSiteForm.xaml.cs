@@ -42,17 +42,29 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
                 SetLabelToError(siteNameLabel);
                 isHide = false;
             }
+            else 
+            {
+                SetLabelToNormal(siteNameLabel);
+            }
 
             if (string.IsNullOrEmpty(filePathText.Text))
             {
                 SetLabelToError(filePathLabel);
                 isHide = false;
             }
+            else
+            {
+                SetLabelToNormal(filePathLabel);
+            }
 
             if (string.IsNullOrEmpty(argumentsText.Text))
             {
                 SetLabelToError(argumentsLabel);
                 isHide = false;
+            }
+            else
+            {
+                SetLabelToNormal(argumentsLabel);
             }
 
             if (isHide)
@@ -84,42 +96,6 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
         {
             label.Foreground = Brushes.Black;
             label.FontWeight = FontWeights.Normal;
-        }
-
-        private void siteNameText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(siteNameText.Text))
-            {
-                SetLabelToError(siteNameLabel);
-            }
-            else
-            {
-                SetLabelToNormal(siteNameLabel);
-            }
-        }
-
-        private void filePathText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(filePathText.Text))
-            {
-                SetLabelToError(filePathLabel);
-            }
-            else
-            {
-                SetLabelToNormal(filePathLabel);
-            }
-        }
-
-        private void argumentsText_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(argumentsText.Text))
-            {
-                SetLabelToError(argumentsLabel);
-            }
-            else
-            {
-                SetLabelToNormal(argumentsLabel);
-            }
         }
     }
 }

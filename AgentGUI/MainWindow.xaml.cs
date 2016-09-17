@@ -34,6 +34,11 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
         }
 
         /// <summary>
+        /// Конфигурация Агента.
+        /// </summary>
+        private AgentConfiguration agentConfiguration = new AgentConfiguration();
+
+        /// <summary>
         /// Основной конструктор.
         /// </summary>
         public MainWindow()
@@ -137,7 +142,19 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
 
             if (siteConfiguration != null)
             {
-                Console.WriteLine();
+                if (agentConfiguration.Sites.Where(s => (s.SiteName == siteConfiguration.SiteName)).Count() == 0)
+                {
+                    agentConfiguration.Sites.Add(siteConfiguration);
+                }
+                else
+                {
+                    MessageBox.Show(
+                        this,
+                        string.Format("Sitename \"{0}\" already exists in the Agent configuration.",siteConfiguration.SiteName),
+                        "Error",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Error);
+                }
             }
         }
     }
