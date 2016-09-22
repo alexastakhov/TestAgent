@@ -73,7 +73,7 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
                 {
                     SiteName = siteNameText.Text,
                     ExecutableFilePath = filePathText.Text,
-                    StartArguments = argumentsText.Text.Split(' ')
+                    StartArguments = argumentsText.Text.Split(' ').ToList()
                 };
 
                 this.Close();

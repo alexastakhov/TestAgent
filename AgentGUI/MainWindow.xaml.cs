@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AlfaBank.AlfaRobot.ControlCenter.Configuration;
+using System.Collections.ObjectModel;
 
 namespace AlfaBank.AlfaRobot.ControlCenter.Agent
 {
@@ -33,6 +34,8 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
             set { fCurrentWindowState = value; }
         }
 
+        public ObservableCollection<SiteConfiguration> sites;
+
         /// <summary>
         /// Конфигурация Агента.
         /// </summary>
@@ -44,6 +47,8 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
         public MainWindow()
         {
             InitializeComponent();
+            //sites = agentConfiguration.Sites;
+            sitesDataGrid.ItemsSource = agentConfiguration.Sites;
         }
 
         /// <summary>
@@ -145,6 +150,8 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Agent
                 if (agentConfiguration.Sites.Where(s => (s.SiteName == siteConfiguration.SiteName)).Count() == 0)
                 {
                     agentConfiguration.Sites.Add(siteConfiguration);
+                    //sitesDataGrid.ItemsSource = null;
+                    //sitesDataGrid.ItemsSource = agentConfiguration.Sites;
                 }
                 else
                 {

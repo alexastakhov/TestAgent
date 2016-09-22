@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,14 +33,14 @@ namespace AlfaBank.AlfaRobot.ControlCenter.Configuration
         /// <summary>
         /// Список конфигураций сайтов.
         /// </summary>
-        public List<SiteConfiguration> Sites;
+        public ObservableCollection<SiteConfiguration> Sites;
 
         /// <summary>
         /// Основной конструктор.
         /// </summary>
         public AgentConfiguration()
         {
-            Sites = new List<SiteConfiguration>();
+            Sites = new ObservableCollection<SiteConfiguration>();
         }
     }
 }
